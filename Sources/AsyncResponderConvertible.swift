@@ -13,12 +13,12 @@ public protocol AsyncResponderConvertible {
 }
 
 extension Response {
-    public var customeResponder: AsyncResponderConvertible? {
-        return self.storage["Slimane.Internal.CustomeResponder"] as? AsyncResponderConvertible
+    public var customResponder: AsyncResponderConvertible? {
+        return self.storage["Slimane.Internal.CustomResponder"] as? AsyncResponderConvertible
     }
 
-    public init (custome customeResponder: AsyncResponderConvertible){
+    public init (custom customResponder: AsyncResponderConvertible){
         self.init()
-        self.storage["Slimane.Internal.CustomeResponder"] = customeResponder
+        self.storage["Slimane.Internal.CustomResponder"] = customResponder
     }
 }
