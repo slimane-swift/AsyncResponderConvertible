@@ -9,7 +9,7 @@
 import S4
 
 public protocol AsyncResponderConvertible {
-    func respond(_ response: Response, result: (Void throws -> Response) -> Void)
+    func respond(_ response: Response, result: ((Void) throws -> Response) -> Void)
 }
 
 extension Response {
