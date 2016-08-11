@@ -17,8 +17,8 @@ extension Response {
         return self.storage["Slimane.Internal.CustomResponder"] as? AsyncResponderConvertible
     }
 
-    public init (custom customResponder: AsyncResponderConvertible){
-        self.init()
+    public init (version: Version = Version(major: 1, minor: 1), status: Status = .ok, headers: Headers = [:], cookieHeaders: Set<String> = [], custom customResponder: AsyncResponderConvertible){
+        self.init(version: version, status: status, headers: headers, cookieHeaders: cookieHeaders, body: .buffer(Data()))
         self.storage["Slimane.Internal.CustomResponder"] = customResponder
     }
 }
